@@ -39,8 +39,6 @@ jobs:
         with:
             images: |
                 ghcr.io/${{ github.repository_owner }}/imdb-to-overseerr
-            flavor: |
-                latest=true
             tags: |
                 type=semver,pattern={{major}}
                 type=semver,pattern={{major}}.{{minor}}
