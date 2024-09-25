@@ -9,6 +9,8 @@ WORKDIR /usr/src/app
 
 # Copy the requirements file and install dependencies
 COPY requirements.txt ./
+RUN curl --proto '=https' --tlsv1.2 -sSf -y https://sh.rustup.rs | sh
+ENV PATH /tmp/.cargo/bin:$PATH
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code
